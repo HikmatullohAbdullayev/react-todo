@@ -2,13 +2,15 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState(0)
 
-  return (
+  const clik = () => {
+      setName(name+1)
+  }
+  return(
     <>
-      <div className="card">
-        
-      </div>
+      <h1>{name}</h1>
+      <button onClick={clik}> tugma</button>
     </>
   )
 }
