@@ -1,0 +1,19 @@
+@font-face {
+    font-family: ms_sans_serif ;
+    src: "../node_modules/react95/dist/fonts/ms_sans_serif.woff";
+}
+
+/* styles.css */
+body {
+    font-family: "MS Sans Serif", sans-serif;
+    /* yoki uni o'zingiz tanlagan boshqa bir serif/sans-serif shrifti */
+}
+.button{
+    background-color: antiquewhite;
+    outline: transparent;
+    border:transparent;
+    font-family: "MS San Serif";
+    font-weight: 400;
+    
+}
+  

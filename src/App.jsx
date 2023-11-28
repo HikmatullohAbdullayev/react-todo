@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import "./test.css"
+import { Button } from '@mui/material'
+// import { ComponentMeta } from '@storybook/react';
 
 function App() {
-  const [name, setName] = useState(0)
   const [data , setData] = useState([
     {
       id:1,
@@ -22,10 +24,12 @@ function App() {
   ])
  
    const del = ( id) =>{
-    const filterDel = data.filter((item2)=> {
-      return item2.id !== id
+   
+    setData((eskiQiymat)=>{
+      return eskiQiymat.filter((item2)=>{
+        return item2.id !== id
+      })
     })
-    setData(filterDel)
   }
   return(
     <>
@@ -37,7 +41,7 @@ function App() {
             <li>{item.nameData}</li> 
             <li>{item.id}</li> 
             <li>{item.email}</li> 
-            <button onClick={ ()=> del(item.id)} >del</button> 
+            <Button variant='contained' className="button"  onClick={ ()=> del(item.id)} >delete</Button>
           </ul>
         )
       })}
